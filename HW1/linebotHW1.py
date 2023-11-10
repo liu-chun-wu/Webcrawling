@@ -20,8 +20,8 @@ from linebot.v3.webhooks import MessageEvent, TextMessageContent
 
 app = Flask(__name__)
 
-configuration = Configuration(access_token="uXah+5gMETXEDN9Gnbo0rJY0Fvtq5ZEzhEvujVWeI5aOtCxpaAT+QI9uM/EeLFP3A+lXqQxaINwDWLAnXBxQKSgkLApI4jpyITnyYZYLXC668g7EfS64j4meI2uYMOt6FW5w4Jg4mtH+DNlSuVns9gdB04t89/1O/w1cDnyilFU=")
-handler = WebhookHandler("8baf788747ba0562b3e6b9a2312fdc5c")
+configuration = Configuration(access_token="")
+handler = WebhookHandler("")
 
 
 @app.route("/callback", methods=["POST"])
@@ -64,8 +64,8 @@ def handle_message(event):
                     reply_token=event.reply_token,
                     messages=[
                         ImageMessage(
-                        original_content_url="https://i.imgur.com/TA2Rpt0.jpg",
-                        preview_image_url="https://i.imgur.com/TA2Rpt0.jpg"
+                            original_content_url="https://i.imgur.com/TA2Rpt0.jpg",
+                            preview_image_url="https://i.imgur.com/TA2Rpt0.jpg"
                         )
                     ]
                 )
@@ -76,8 +76,8 @@ def handle_message(event):
                     reply_token=event.reply_token,
                     messages=[
                         StickerMessage(
-                            package_id = "446",
-                            sticker_id = "1988"
+                            package_id="446",
+                            sticker_id="1988"
                         )
                     ]
                 )
@@ -93,8 +93,8 @@ def handle_message(event):
                             preview_image_url="https://i.imgur.com/TA2Rpt0.jpg"
                         ),
                         StickerMessage(
-                            package_id = "446",
-                            sticker_id = "1988"
+                            package_id="446",
+                            sticker_id="1988"
                         )
                     ]
                 )
@@ -105,10 +105,10 @@ def handle_message(event):
                     reply_token=event.reply_token,
                     messages=[
                         LocationMessage(
-                            title = "National Central University",
-                            address = "桃園市中壢區中大路300號",
-                            latitude = 24.968972,
-                            longitude = 121.1946
+                            title="National Central University",
+                            address="桃園市中壢區中大路300號",
+                            latitude=24.968972,
+                            longitude=121.1946
                         )
                     ]
                 )
@@ -119,14 +119,17 @@ def handle_message(event):
                     reply_token=event.reply_token,
                     messages=[TextMessage(
                         text="Your student Info",
-                        quick_reply = QuickReply(
+                        quick_reply=QuickReply(
                             items=[
-                                QuickReplyItem(action = MessageAction(label = "Name",text="Name")),
-                                QuickReplyItem(action = MessageAction(label = "StudentID",text="StudentID")),
-                                QuickReplyItem(action = MessageAction(label = "banana",text="banana"))
-                                ]
-                            )
+                                QuickReplyItem(action=MessageAction(
+                                    label="Name", text="Name")),
+                                QuickReplyItem(action=MessageAction(
+                                    label="StudentID", text="StudentID")),
+                                QuickReplyItem(action=MessageAction(
+                                    label="banana", text="banana"))
+                            ]
                         )
+                    )
                     ]
                 )
             )

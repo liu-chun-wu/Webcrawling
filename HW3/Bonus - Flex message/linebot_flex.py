@@ -18,8 +18,8 @@ import json
 app = Flask(__name__)
 
 configuration = Configuration(
-    access_token="3HekGAAKBbw0qtZqkTIf+NxHPo4QwTGt5q9k1pNLozIoaaw/MXwgNH2bjbXaEOmrA+lXqQxaINwDWLAnXBxQKSgkLApI4jpyITnyYZYLXC4zR0PjTI+Q2ybluF/5poF8xAhLB0Q5X+3kuwAX/czfNwdB04t89/1O/w1cDnyilFU=")
-handler = WebhookHandler("8baf788747ba0562b3e6b9a2312fdc5c")
+    access_token="")
+handler = WebhookHandler("")
 
 
 @app.route("/callback", methods=["POST"])
