@@ -15,6 +15,6 @@ SearchBar.send_keys("戰車世界\ue007")
 # 存取 Website
 
 # 等待 5 秒鐘以載入頁面
-time.sleep(120)
+time.sleep(5)
 # 關閉瀏覽器視窗
 chrome.close()
