@@ -9,11 +9,10 @@ options = Options()
 s = Service()
 chrome = webdriver.Chrome(service=s, options=options)
 url = "https://www.google.com/"
-chrome.get(url)
-SearchBar = chrome.find_element(By.ID, "APjFqb")
-SearchBar.send_keys("戰車世界\ue007")
 # 存取 Website
-
+chrome.get(url)
+# 輸入搜尋框並enter
+SearchBar = chrome.find_element(By.ID, "APjFqb").send_keys("戰車世界\ue007")
 # 等待 5 秒鐘以載入頁面
 time.sleep(5)
 # 關閉瀏覽器視窗
